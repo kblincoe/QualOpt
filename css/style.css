@@ -46,7 +46,21 @@ label{
     position: relative;
     top: 30%;
     left: 30%;
+}
 
+.textBox{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+    top: 30%;
+    left: 30%;
+}
+.titleText{
+    text-align: center;
 }
 /* Center the avatar image inside this container */
 .imgcontainer {
