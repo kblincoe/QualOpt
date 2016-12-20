@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-    <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+    <form name="login" id="login" action="http://localhost:8080/QualOptServer/services/user/login" method="get" accept-charset="utf-8">
         <div class="imgcontainer">
             <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container">
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
 
             <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Enter Password" name="password" required>
 
             <label>Remember me</label>
             <input type="checkbox" checked="checked"><br>
@@ -28,5 +29,6 @@
             <button type="button" class="signupbtn">Sign Up</button>
         </div>
     </form>
+    <script src="scripts/login.js"></script>
 </body>
 </html>

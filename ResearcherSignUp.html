@@ -7,7 +7,7 @@
     <script src="scripts/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-    <form name="signup" action="http://localhost:8080/UserManagement/rest/UserService/users" method="post" accept-charset="utf-8">
+    <form name="signup" id="signup" action="http://localhost:8080/QualOptServer/services/user/newuser" method="post" accept-charset="utf-8">
         <div>
             <h1 class="titleText">
                 QualOpt Sign Up
@@ -30,9 +30,10 @@
             <label><b>Occupation Description</b><br></label>
             <textarea class="textBox" rows="5" placeholder="Enter Description" name="description" required></textarea>
 
-            <button type="submit" name="submit" value="Submit">Login</button>
+            <button type="submit" name="submit" value="Submit">Sign Up</button>
 
         </div>
     </form>
+    <script src="scripts/signup.js"></script>
 </body>
 </html>

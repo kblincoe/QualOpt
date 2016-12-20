@@ -1,10 +1,14 @@
-function submitForm(form){
-    var url = form.attr("action");
-    var formData = {};
-    $(form).find("input[name]").each(function (index, node) {
-        formData[node.name] = node.value;
-    });
-    $.post(url, formData).done(function (data) {
-        alert(data);
-    });
-}
+$("#signup").submit(function(event){
+    event.preventDefault();
+     $.ajax({
+         type: "POST",
+         url: "http://localhost:8080/QualOptServer/services/user/newuser",
+         data: $(this).serialize(),
+         success: function() {
+            // callback code here
+            alert("Submitted!");
+            window.location.href = "ResearcherLogin.html";
+         }
+        });
+});
+
