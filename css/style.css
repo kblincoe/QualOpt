@@ -1,3 +1,11 @@
+html, body{
+    height: 100%;
+}
+
+.content{
+    min-height: 100%;
+}
+
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
@@ -81,6 +89,13 @@ img.avatar {
     padding: 16px;
 }
 
+.buttonContainer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:100px;
+}
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
