@@ -9,5 +9,8 @@ $(document).ready(function(){
     }else{
         $('#haspay').prop('checked', false);
     }
-
 });
+
+function goToEmail(){
+    window.location.href = "EmailDraft.html";
+}

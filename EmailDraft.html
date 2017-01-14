@@ -15,34 +15,29 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<form name="currentstudy" id="currenttudy" action="http://localhost:8080/QualOptServer/services/user/currentstudy" method="post" accept-charset="utf-8">
+<form name="emaildraft" id="emaildraft" action="http://localhost:8080/QualOptServer/services/user/email" method="post" accept-charset="utf-8">
     <div>
         <h1 class="titleText">
-            Create new Study
+            Draft Email
         </h1>
     </div>
 
     <div class="container">
-        <label><b>Name</b></label>
-        <input type="text" id="studyname" placeholder="Enter Name of Study" name="name" required>
+        <label><b>Sender Email</b></label>
+        <input type="text" id="senderemail" placeholder="Enter sender email" name="senderemail" required>
 
-        <label><b>Study Description</b><br></label>
-        <textarea class="textBox" id="studydescription" rows="5" placeholder="Enter Description" name="description" required></textarea>
+        <label><b>Email Subject</b></label>
+        <input type="text" id="subject" placeholder="Enter email subject" name="subject" required>
 
-        <label><b>Study Incentive</b><br></label>
-        <textarea class="textBox" id="studyincentive" rows="5" placeholder="Enter Incentive for participants" name="incentive" required></textarea>
+        <label><b>Email Body</b><br></label>
+        <textarea class="textBox" id="emailbody" rows="5" placeholder="Enter Email Here" name="emailbody" required></textarea>
 
-        <label>Has Monetary Incentive</label>
-        <input type="checkbox" id="haspay" value="Pay" name="hasPay"><br>
-
-        <button type="submit" name="submit" value="Submit">Save Study</button>
+        <button type="submit" name="submit" value="Submit">Send Email</button>
 
     </div>
     <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="signupbtn" onclick="goToEmail()">Draft Email</button>
+        <button type="button" class="signupbtn">Participants List</button>
     </div>
 </form>
-
-<script src="scripts/currentStudy.js"></script>
 </body>
 </html>
