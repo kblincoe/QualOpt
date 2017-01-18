@@ -1,5 +1,9 @@
 $(document).ready(function(){
+    console.log(localStorage.getItem('token'));
     $.ajax({ url: "http://localhost:8080/QualOptServer/services/user/allstudies",
+        headers : {
+           Authorization : 'Bearer ' + localStorage.getItem('token')
+        },
         context: document.body,
         success: function(data){
            alert("done");

@@ -7,10 +7,15 @@ $("#login").submit(function(event){
          success: function(xhr) {
             // callback code here
             alert("Submitted!");
+            console.log(xhr.token);
+            localStorage.setItem('token', xhr.token);
             window.location.href = "MainMenu.html";
          },error: function(xhr){
             if(xhr.status == 403){
                 alert("Login failed. Please check that the email and password entered are correct");
+            }else{
+                alert("Something went wrong." + xhr);
+                console.log(xhr);
             }
          }
         });
