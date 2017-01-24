@@ -9,6 +9,18 @@ $(document).ready(function(){
     }else{
         $('#haspay').prop('checked', false);
     }
+    console.log(JSON.stringify(study));
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/QualOptServer/services/user/currentstudy",
+        headers : {
+            Authorization : 'Bearer ' + localStorage.getItem('token')
+        },
+        contentType: "text/plain",
+        data: JSON.stringify(study),
+        success: function() {
+        }
+    });
 });
 
 function goToEmail(){

@@ -14,7 +14,7 @@ $("#login").submit(function(event){
             if(xhr.status == 403){
                 alert("Login failed. Please check that the email and password entered are correct");
             }else{
-                alert("Something went wrong." + xhr);
+                alert("Something went wrong.");
                 console.log(xhr);
             }
          }
