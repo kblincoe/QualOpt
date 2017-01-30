@@ -38,7 +38,7 @@ button {
     left: 30%;
 }
 
-input[type='checkbox'] {
+input[type='checkbox'], input[type='number'] {
     position: relative;
     top: 30%;
     left: 30%;
@@ -91,7 +91,7 @@ img.avatar {
 
 .buttonContainer{
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     right: 0;
     height:100px;

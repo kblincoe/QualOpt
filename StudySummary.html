@@ -15,10 +15,10 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<form name="currentstudy" id="currenttudy" action="http://localhost:8080/QualOptServer/services/user/currentstudy" method="post" accept-charset="utf-8">
+<form name="currentstudy" id="currentstudy" action="http://localhost:8080/QualOptServer/services/user/currentstudy" method="post" accept-charset="utf-8">
     <div>
         <h1 class="titleText">
-            Create new Study
+            Study Summary
         </h1>
     </div>
 
@@ -37,10 +37,11 @@
 
         <button type="submit" name="submit" value="Submit">Save Study</button>
 
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="signupbtn" onclick="goToEmail()">Draft Email</button>
+        </div>
     </div>
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="signupbtn" onclick="goToEmail()">Draft Email</button>
-    </div>
+
 </form>
 
 <script src="scripts/currentStudy.js"></script>

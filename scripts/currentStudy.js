@@ -23,6 +23,23 @@ $(document).ready(function(){
     });
 });
 
+$("#currentstudy").submit(function(event){
+    event.preventDefault();
+     $.ajax({
+         type: "POST",
+         url: "http://localhost:8080/QualOptServer/services/user/updatestudy",
+         headers : {
+            Authorization : 'Bearer ' + localStorage.getItem('token')
+         },
+         data: $(this).serialize(),
+         success: function() {
+            // callback code here
+            alert("Saved!");
+            window.location.href = "MainMenu.html";
+         }
+      });
+});
+
 function goToEmail(){
     window.location.href = "EmailDraft.html";
 }
