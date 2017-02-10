@@ -1,8 +1,8 @@
-$("#emaildraft").submit(function(event){
+$("#filter").submit(function(event){
     event.preventDefault();
      $.ajax({
          type: "POST",
-         url: "http://localhost:8080/QualOptServer/services/user/email",
+         url: "http://localhost:8080/QualOptServer/services/user/filter",
          headers : {
             Authorization : 'Bearer ' + localStorage.getItem('token')
          },
@@ -10,11 +10,7 @@ $("#emaildraft").submit(function(event){
          success: function() {
             // callback code here
             alert("Submitted!");
-            window.location.href = "StudySummary.html";
+            window.location.href = "EmailDraft.html";
          }
-      });
-});
-
-$("#filters").click(function(){
-    window.location.href = "FilterSelection.html";
+        });
 });

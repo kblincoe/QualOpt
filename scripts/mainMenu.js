@@ -9,12 +9,10 @@ $(document).ready(function(){
            alert("done");
            console.log(data);
            $.each(data, function(i, item) {
-               var $tr = $('<tr>').append(
-                   $('<td>').text(item.name)
-               ).appendTo('#studytable');
-               console.log($tr.wrap('<p>').html());
+               $("#studytable").append($("<tr>").append($("<td>").append(item.name)));
+               //console.log($tr.wrap('<p>').html());
            });
-           $('table tr').addClass('clickable-row');
+           $('table tr').addClass('clickable-row table table-striped table-hover');
            $(".clickable-row").click(function() {
                var $name = $(this).closest("tr").text();         // Retrieves the text within <td>
                $.each(data, function(i, item) {

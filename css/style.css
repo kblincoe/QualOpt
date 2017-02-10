@@ -97,6 +97,13 @@ img.avatar {
     height:100px;
 }
 
+.dropdown{
+    position: relative;
+    top: 30%;
+    left: 30%;
+    width: 15%;
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
